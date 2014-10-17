@@ -7,24 +7,17 @@ window.AnimalApp = AnimalApp;
 
 // routes to the templates
 AnimalApp.Router.map(function() {
-  this.resource('animals');
+  this.resource('animals', function(){
+    this.route('cats');
+    this.route('dogs');
+    this.route('ducks')
+  });
 });
 
-AnimalApp.ANIMALS = [
-{
-  type: 'Cats'
-},
-{
-  type: 'Dogs'
-},
-{
-  type: 'Ducks'
-}
-];
 
 AnimalApp.AnimalsRoute = Ember.Route.extend({
   model: function() {
-    return AnimalApp.ANIMALS;
+    return {};
   }
 });
 
