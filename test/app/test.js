@@ -11,4 +11,16 @@ describe('app', function() {
       expect(find('a.home').length).to.equal(1);
     })
   });
+  it('will have a home link and a animals link', function(){
+    visit('/animals')
+    andThen(function(){
+      expect(find('a.animals').length).to.equal(1);
+    })
+  });
+  it('lists all the animal types', function(){
+    visit('/animals')
+    andThen(function(){
+      expect(find('ul.animals li').length).to.eql(3)
+    })
+  })
 });
