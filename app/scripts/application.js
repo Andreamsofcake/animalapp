@@ -9,8 +9,8 @@ window.AnimalApp = AnimalApp;
 AnimalApp.Router.map(function() {
   this.resource('animals', function(){
     this.resource('cats', function(){});
-    this.route('dogs');
-    this.route('ducks')
+    this.resource('dogs', function(){});
+    this.resource('ducks', function(){});
   });
 });
 
