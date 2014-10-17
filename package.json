@@ -2,11 +2,10 @@
   "name": "animal-app",
   "version": "0.1.0",
   "scripts": {
-    "test": "./node_modules/.bin/gulp test:coverage && if [ \"$TRAVIS\" ]; then cat ./coverage/**/lcov.info | ./node_modules/.bin/coveralls; fi"
+    "test": "gulp test:coverage && if [ \"$TRAVIS\" ]; then cat ./coverage/**/lcov.info | ./node_modules/.bin/coveralls; fi"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^4.1.11",
     "chai": "^1.9.0",
@@ -58,5 +57,18 @@
     "sinon-chai": "^2.5.0",
     "through2": "^0.5.1",
     "tiny-lr": "^0.0.7"
-  }
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Andreamsofcake/animalapp.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Andreamsofcake/animalapp/issues"
+  },
+  "homepage": "https://github.com/Andreamsofcake/animalapp"
 }
