@@ -31,7 +31,7 @@ describe('app', function() {
       expect(find('ul.animals li a.ducks').length).to.equal(1);
     })
   });
-  it.skip('will cats to a list of cats', function(){
+  it.skip('will link cats to a list of cats', function(){
     visit('/animals')
     click('cats')
     andThen(function(){
