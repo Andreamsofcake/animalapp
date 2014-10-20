@@ -17,10 +17,15 @@ AnimalApp.Router.map(function() {
   });
 });
 
+AnimalApp.FRECKLES = {
+  name: "Freckles",
+  color: "Red",
+  size: 'Big'
+};
 
-AnimalApp.CatsRoute = Ember.Route.extend({
+AnimalApp.CatsFrecklesRoute = Ember.Route.extend({
   model: function() {
-    return {};
+    return AnimalApp.FRECKLES;
   }
 });
 

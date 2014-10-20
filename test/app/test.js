@@ -37,4 +37,10 @@ describe('app', function() {
       expect(find('ul.cats.index li').length).to.equal(2);
     })
   });
+  it.skip('will link to the infomation about that animal', function(){
+    visit('/animals/cats/freckles')
+    andThen(function(){
+      expect(find('ul.cats.index.freckles li a.freckles').length).to.equal(1);
+    })
+  });
 });
