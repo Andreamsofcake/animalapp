@@ -31,11 +31,10 @@ describe('app', function() {
       expect(find('ul.animals li a.ducks').length).to.equal(1);
     })
   });
-  it.skip('will link cats to a list of cats', function(){
-    visit('/animals')
-    click('cats')
+  it('will link cats to a list of cats', function(){
+    visit('/animals/cats')
     andThen(function(){
-      expect(find('ul.cats li').length).to.equal(2);
+      expect(find('ul.cats.index li').length).to.equal(2);
     })
   });
 });
